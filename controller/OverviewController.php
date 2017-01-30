@@ -8,7 +8,13 @@ class OverviewController extends Controller {
     // Render "Home" view
     
     public function show($page) {
-        $this->render("Overview");
+        $dummytest = $GLOBALS["dummy"];
+        $dummy = $dummytest->getAll();
+        $data = array(
+            "dummy" => $dummy,            
+        );
+        
+        return $this->render("overview", $data) ;
     }
     
 } 

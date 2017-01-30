@@ -22,7 +22,7 @@ require_once("controller/Router.php");
 // require_once("config");
 
 // Model layer - Database functions
-// require_once("model/DBconnect.php");
+ require_once("model/DBconnect.php");
 
 
 
