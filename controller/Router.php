@@ -12,7 +12,7 @@ class Router {
             $page = $_REQUEST["page"];
         } else{
             // $page = GLOBALS["DEFAULT_PAGE"];
-                $page = "Overview";   
+                $page = "overview";   
         }
         return $page;
     }  
@@ -23,12 +23,12 @@ class Router {
     public function getController() {
         $page = $this->getPage();
         switch ($page) {
-            case "Overview":
+            case "overview":
                 return new OverviewController();
             
-//            case "home":
-//            default:
-//                return new HomeController();
+            case "addDummy":
+            default:
+                return new OverviewController();
             
         }
         
