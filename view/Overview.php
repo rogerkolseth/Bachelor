@@ -12,6 +12,13 @@ $results = $GLOBALS["dummy"];
 
 
     <br> <br>
+    
+    <?php
+    $display = new Dummy();
+    $getRow = $display->getAll();
+    var_dump($getRow);
+    ?>
+    
     <b>Opprett ny brukerting</b>
 
     <form action="?page=addDummy" method="post">
