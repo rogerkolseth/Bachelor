@@ -14,10 +14,13 @@ $results = $GLOBALS["dummy"];
     <br> <br>
     
     <?php
-    $display = new Dummy();
-    $getRow = $display->getAll();
-    var_dump($getRow);
-    ?>
+    $dbConn = new PDO('mysql:host=localhost;dbname=tafjord;charset=utf8mb4', 'root', 'Tafjord123');
+    $display = new Dummy($dbConn);
+    $getRow = $display->getAll();?>
+    <?php foreach ($getRow as $getRow): ?>        
+    <?php echo "ID: " . $getRow['ID'] . ",  Brukernavn: " . $getRow['brukernavn'] . ",  Info: " . $getRow['tekst']; ?><br>
+    <?php endforeach; ?>
+
     
     <b>Opprett ny brukerting</b>
 

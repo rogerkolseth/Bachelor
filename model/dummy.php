@@ -5,7 +5,7 @@
 class Dummy{
     
     private $dbConn;
-    
+   
     
     const TABLE = "dummy";
     const SELECT_QUERY = "SELECT * FROM " . Dummy::TABLE;

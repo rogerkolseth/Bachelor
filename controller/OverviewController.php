@@ -9,11 +9,14 @@ class OverviewController extends Controller {
 
     public function show($page) {
         if ($page == "overview"){
+        
         $dummytest = $GLOBALS["dummy"];
 
         $dummy = $dummytest->getAll();
         $data = array("dummy" => $dummy);
 
+        
+        
         return $this->render("overview", $data);
         }
         else if($page == "addDummy"){
